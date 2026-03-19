@@ -13,7 +13,7 @@ class NotifyTest extends TestCase {
   }
 
   public function testNotifyReady(): void {
-    $this->assertEquals(false, \systemd_notify(false, \STATE_READY, (string) 1));
+    $this->assertEquals(false, \systemd_notify(false, \SYSTEMD_STATE_READY, (string) 1));
   }
 
   public function testWatchdogEnabled(): void {

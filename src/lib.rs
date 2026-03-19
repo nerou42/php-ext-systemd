@@ -10,49 +10,49 @@ use systemd::daemon;
 #[php_module]
 pub fn get_module(module: ModuleBuilder) -> ModuleBuilder {
     module
-        .constant(wrap_constant!(STATE_BUSERROR))
-        .constant(wrap_constant!(STATE_ERRNO))
-        .constant(wrap_constant!(STATE_EXTEND_TIMEOUT_USEC))
-        .constant(wrap_constant!(STATE_FDNAME))
-        .constant(wrap_constant!(STATE_FDSTORE))
-        .constant(wrap_constant!(STATE_FDSTOREREMOVE))
-        .constant(wrap_constant!(STATE_MAINPID))
-        .constant(wrap_constant!(STATE_READY))
-        .constant(wrap_constant!(STATE_RELOADING))
-        .constant(wrap_constant!(STATE_STATUS))
-        .constant(wrap_constant!(STATE_STOPPING))
-        .constant(wrap_constant!(STATE_WATCHDOG))
-        .constant(wrap_constant!(STATE_WATCHDOG_USEC))
+        .constant(wrap_constant!(SYSTEMD_STATE_BUSERROR))
+        .constant(wrap_constant!(SYSTEMD_STATE_ERRNO))
+        .constant(wrap_constant!(SYSTEMD_STATE_EXTEND_TIMEOUT_USEC))
+        .constant(wrap_constant!(SYSTEMD_STATE_FDNAME))
+        .constant(wrap_constant!(SYSTEMD_STATE_FDSTORE))
+        .constant(wrap_constant!(SYSTEMD_STATE_FDSTOREREMOVE))
+        .constant(wrap_constant!(SYSTEMD_STATE_MAINPID))
+        .constant(wrap_constant!(SYSTEMD_STATE_READY))
+        .constant(wrap_constant!(SYSTEMD_STATE_RELOADING))
+        .constant(wrap_constant!(SYSTEMD_STATE_STATUS))
+        .constant(wrap_constant!(SYSTEMD_STATE_STOPPING))
+        .constant(wrap_constant!(SYSTEMD_STATE_WATCHDOG))
+        .constant(wrap_constant!(SYSTEMD_STATE_WATCHDOG_USEC))
         .function(wrap_function!(notify))
         .function(wrap_function!(watchdog_enabled))
 }
 
 #[php_const]
-pub const STATE_BUSERROR: &str = daemon::STATE_BUSERROR;
+pub const SYSTEMD_STATE_BUSERROR: &str = daemon::STATE_BUSERROR;
 #[php_const]
-pub const STATE_ERRNO: &str = daemon::STATE_ERRNO;
+pub const SYSTEMD_STATE_ERRNO: &str = daemon::STATE_ERRNO;
 #[php_const]
-pub const STATE_EXTEND_TIMEOUT_USEC: &str = daemon::STATE_EXTEND_TIMEOUT_USEC;
+pub const SYSTEMD_STATE_EXTEND_TIMEOUT_USEC: &str = daemon::STATE_EXTEND_TIMEOUT_USEC;
 #[php_const]
-pub const STATE_FDNAME: &str = daemon::STATE_FDNAME;
+pub const SYSTEMD_STATE_FDNAME: &str = daemon::STATE_FDNAME;
 #[php_const]
-pub const STATE_FDSTORE: &str = daemon::STATE_FDSTORE;
+pub const SYSTEMD_STATE_FDSTORE: &str = daemon::STATE_FDSTORE;
 #[php_const]
-pub const STATE_FDSTOREREMOVE: &str = daemon::STATE_FDSTOREREMOVE;
+pub const SYSTEMD_STATE_FDSTOREREMOVE: &str = daemon::STATE_FDSTOREREMOVE;
 #[php_const]
-pub const STATE_MAINPID: &str = daemon::STATE_MAINPID;
+pub const SYSTEMD_STATE_MAINPID: &str = daemon::STATE_MAINPID;
 #[php_const]
-pub const STATE_READY: &str = daemon::STATE_READY;
+pub const SYSTEMD_STATE_READY: &str = daemon::STATE_READY;
 #[php_const]
-pub const STATE_RELOADING: &str = daemon::STATE_RELOADING;
+pub const SYSTEMD_STATE_RELOADING: &str = daemon::STATE_RELOADING;
 #[php_const]
-pub const STATE_STATUS: &str = daemon::STATE_STATUS;
+pub const SYSTEMD_STATE_STATUS: &str = daemon::STATE_STATUS;
 #[php_const]
-pub const STATE_STOPPING: &str = daemon::STATE_STOPPING;
+pub const SYSTEMD_STATE_STOPPING: &str = daemon::STATE_STOPPING;
 #[php_const]
-pub const STATE_WATCHDOG: &str = daemon::STATE_WATCHDOG;
+pub const SYSTEMD_STATE_WATCHDOG: &str = daemon::STATE_WATCHDOG;
 #[php_const]
-pub const STATE_WATCHDOG_USEC: &str = daemon::STATE_WATCHDOG_USEC;
+pub const SYSTEMD_STATE_WATCHDOG_USEC: &str = daemon::STATE_WATCHDOG_USEC;
 
 /// Notifies systemd that daemon stat has changed
 /// @param bool unset_environment
