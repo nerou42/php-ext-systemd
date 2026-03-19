@@ -1,0 +1,20 @@
+{
+  "name": "nerou/systemd",
+  "type": "php-ext",
+  "license": "MIT",
+  "description": "systemd interface for PHP",
+  "homepage": "https://github.com/nerou42/php-ext-systemd",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12"
+  },
+  "php-ext": {
+    "extension-name": "systemd",
+    "configure-options": []
+  },
+  "scripts": {
+    "test": "@php -d extension=./target/debug/libsystemd.so ./vendor/bin/phpunit test"
+  }
+}
