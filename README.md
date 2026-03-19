@@ -28,4 +28,4 @@ Have a look at the [stubs file](systemd.stubs.php) to see the API.
 
 ## License
 
-This project is licensed under the [LGPL 2.1 license](LICENSE.md).
+This project is licensed under the [MIT](LICENSE.md).
